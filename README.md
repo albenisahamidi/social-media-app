@@ -1,0 +1,270 @@
+# 📱 Social Media Application
+
+> A full-stack social media web application where users can create accounts, share posts, like posts, comment on posts, manage their profile, and reset their password via email.
+
+---
+
+# ⚙️ Setup & Installation
+
+Follow these steps to run the project locally.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone <repository-url>
+cd social-media-app
+```
+
+### 2️⃣ Install dependencies
+
+Backend
+
+```bash
+cd backend
+npm install
+```
+
+Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the **backend** folder:
+
+```env
+PORT=5001
+MONGO_URI=mongodb://localhost:27017/socialmedia_app
+JWT_SECRET=your_secret_key
+
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+
+FRONTEND_URL=http://localhost:3000
+```
+
+---
+
+# ▶️ Running the Application
+
+### Start Backend
+
+```bash
+cd backend
+npm start
+```
+
+Backend runs on:
+
+```
+http://localhost:5001
+```
+
+### Start Frontend
+
+```bash
+cd frontend
+npm start
+```
+
+Frontend runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 📌 Overview
+
+This project is a **Full-Stack Social Media Application** built using **React, Node.js, Express, and MongoDB**.
+
+The application allows users to:
+
+- register and log in
+- create and manage posts
+- like and comment on posts
+- upload a profile avatar
+- reset their password via email
+
+The project follows a **RESTful architecture** with a clear separation between frontend and backend.
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React
+- React Router
+- Context API
+- Axios
+- Tailwind CSS
+- Conditional Rendering
+- Pagination
+
+## Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt (password hashing)
+- Multer (file uploads)
+- Nodemailer (email system)
+
+---
+
+# 🗄 Database Structure
+
+The application uses **MongoDB** with the following collections:
+
+- Users
+- Posts
+- Comments
+- PostLikes
+- Tokens (for password reset)
+
+### Relationships
+
+- One User → Many Posts
+- One Post → Many Comments
+- One Post → Many Likes
+- One User → Many Comments
+
+---
+
+# 🔐 Authentication & Security
+
+- JWT-based authentication
+- Password hashing with bcrypt
+- Protected routes using middleware
+- Reset password tokens with expiration
+- Only post owners can edit or delete posts
+
+---
+
+# 🚀 Main Features
+
+### User System
+
+- User registration
+- User login / logout
+- JWT authentication
+- Protected routes
+
+### Posts
+
+- Create post
+- Edit post
+- Delete post
+- Upload post image
+- View feed with pagination
+
+### Likes
+
+- Like / Unlike posts
+- Like counter
+
+### Comments
+
+- Add comment to posts
+- View comments
+- Delete own comments
+
+### Profile
+
+- User profile page
+- Upload profile avatar
+- View user posts
+
+### Password Recovery
+
+- Forgot Password
+- Email reset link
+- Token-based password reset
+- Token expiration for security
+
+---
+
+# 📡 Main API Endpoints
+
+## Auth Routes
+
+```
+POST /auth/register
+POST /auth/login
+POST /auth/forgot-password
+POST /auth/reset-password/:token
+```
+
+## Post Routes
+
+```
+GET /posts
+POST /posts
+PATCH /posts/:id
+DELETE /posts/:id
+POST /posts/:id/like
+```
+
+## Comment Routes
+
+```
+GET /comments/:postId
+POST /comments/:postId
+DELETE /comments/:id
+```
+
+---
+
+# 📂 Project Structure
+
+### Backend
+
+```
+backend/
+ ├── models
+ ├── routes
+ ├── middleware
+ ├── util
+ ├── templates
+ └── index.js
+```
+
+### Frontend
+
+```
+frontend/
+ ├── components
+ ├── pages
+ ├── context
+ ├── services
+ └── App.js
+```
+
+---
+
+# 🎯 Purpose of the Project
+
+This project demonstrates:
+
+- Full Stack application development
+- REST API design
+- JWT authentication
+- MongoDB database modeling
+- Frontend-backend integration
+- Secure password handling
+- Email-based password recovery
+
+---
+
+# 👩‍💻 Author
+
+**Albenisa Sahamidi**
