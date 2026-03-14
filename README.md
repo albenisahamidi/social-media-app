@@ -11,10 +11,9 @@ Follow these steps to run the project locally.
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/albenisahamidi/social-media-app.git
 cd social-media-app
 ```
-
 ### 2️⃣ Install dependencies
 
 Backend
@@ -56,7 +55,7 @@ FRONTEND_URL=http://localhost:3000
 
 ```bash
 cd backend
-npm start
+npm run dev
 ```
 
 Backend runs on:
@@ -267,4 +266,4 @@ This project demonstrates:
 
 # 👩‍💻 Author
 
-**Albenisa Sahamidi**
+**Albenisa Hamidi**
