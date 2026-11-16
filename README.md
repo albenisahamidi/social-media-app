@@ -1,113 +1,36 @@
-# 📱 Social Media Application
+# Social Media Application
 
 > A full-stack social media web application where users can create accounts, share posts, like posts, comment on posts, manage their profile, and reset their password via email.
 
 ---
 
-# ⚙️ Setup & Installation
-
-Follow these steps to run the project locally.
-
-### 1️⃣ Clone the repository
-
-```bash
-git clone https://github.com/albenisahamidi/social-media-app.git
-cd social-media-app
-```
-### 2️⃣ Install dependencies
-
-Backend
-
-```bash
-cd backend
-npm install
-```
-
-Frontend
-
-```bash
-cd frontend
-npm install
-```
-
----
-
-# 🔑 Environment Variables
-
-Create a `.env` file inside the **backend** folder:
-
-```env
-PORT=5001
-MONGO_URI=mongodb://localhost:27017/socialmedia_app
-JWT_SECRET=your_secret_key
-
-SMTP_USER=your_email@gmail.com
-SMTP_PASS=your_app_password
-
-FRONTEND_URL=http://localhost:3000
-```
-
----
-
-# ▶️ Running the Application
-
-### Start Backend
-
-```bash
-cd backend
-npm run dev
-```
-
-Backend runs on:
-
-```
-http://localhost:5001
-```
-
-### Start Frontend
-
-```bash
-cd frontend
-npm start
-```
-
-Frontend runs on:
-
-```
-http://localhost:3000
-```
-
----
-
-# 📌 Overview
+## Overview
 
 This project is a **Full-Stack Social Media Application** built using **React, Node.js, Express, and MongoDB**.
 
 The application allows users to:
 
-- register and log in
-- create and manage posts
-- like and comment on posts
-- upload a profile avatar
-- reset their password via email
+- Register and log in
+- Create and manage posts
+- Like and comment on posts
+- Upload a profile avatar
+- Reset their password via email
 
 The project follows a **RESTful architecture** with a clear separation between frontend and backend.
 
 ---
 
-# 🛠 Tech Stack
+## Tech Stack
 
-## Frontend
+### Frontend
 
 - React
 - React Router
 - Context API
 - Axios
 - Tailwind CSS
-- Conditional Rendering
-- Pagination
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
@@ -120,7 +43,58 @@ The project follows a **RESTful architecture** with a clear separation between f
 
 ---
 
-# 🗄 Database Structure
+## Main Features
+
+### User System
+
+- User registration
+- User login / logout
+- JWT authentication
+- Protected routes
+
+### Posts
+
+- Create, edit and delete posts
+- Upload post image
+- View feed with pagination
+
+### Likes
+
+- Like / unlike posts
+- Like counter
+
+### Comments
+
+- Add comments to posts
+- View comments
+- Delete own comments
+
+### Profile
+
+- User profile page
+- Upload profile avatar
+- View user posts
+
+### Password Recovery
+
+- Forgot password
+- Email reset link
+- Token-based password reset
+- Token expiration for security
+
+---
+
+## Authentication & Security
+
+- JWT-based authentication
+- Password hashing with bcrypt
+- Protected routes using middleware
+- Reset password tokens with expiration
+- Only post owners can edit or delete posts
+
+---
+
+## Database Structure
 
 The application uses **MongoDB** with the following collections:
 
@@ -139,62 +113,9 @@ The application uses **MongoDB** with the following collections:
 
 ---
 
-# 🔐 Authentication & Security
+## Main API Endpoints
 
-- JWT-based authentication
-- Password hashing with bcrypt
-- Protected routes using middleware
-- Reset password tokens with expiration
-- Only post owners can edit or delete posts
-
----
-
-# 🚀 Main Features
-
-### User System
-
-- User registration
-- User login / logout
-- JWT authentication
-- Protected routes
-
-### Posts
-
-- Create post
-- Edit post
-- Delete post
-- Upload post image
-- View feed with pagination
-
-### Likes
-
-- Like / Unlike posts
-- Like counter
-
-### Comments
-
-- Add comment to posts
-- View comments
-- Delete own comments
-
-### Profile
-
-- User profile page
-- Upload profile avatar
-- View user posts
-
-### Password Recovery
-
-- Forgot Password
-- Email reset link
-- Token-based password reset
-- Token expiration for security
-
----
-
-# 📡 Main API Endpoints
-
-## Auth Routes
+### Auth Routes
 
 ```
 POST /auth/register
@@ -203,27 +124,27 @@ POST /auth/forgot-password
 POST /auth/reset-password/:token
 ```
 
-## Post Routes
+### Post Routes
 
 ```
-GET /posts
-POST /posts
-PATCH /posts/:id
+GET    /posts
+POST   /posts
+PATCH  /posts/:id
 DELETE /posts/:id
-POST /posts/:id/like
+POST   /posts/:id/like
 ```
 
-## Comment Routes
+### Comment Routes
 
 ```
-GET /comments/:postId
-POST /comments/:postId
+GET    /comments/:postId
+POST   /comments/:postId
 DELETE /comments/:id
 ```
 
 ---
 
-# 📂 Project Structure
+## Project Structure
 
 ### Backend
 
@@ -250,11 +171,69 @@ frontend/
 
 ---
 
-# 🎯 Purpose of the Project
+## Setup & Installation
 
-This project demonstrates:
+Follow these steps to run the project locally.
 
-- Full Stack application development
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/albenisahamidi/social-media-app.git
+cd social-media-app
+```
+
+### 2. Install dependencies
+
+Backend:
+
+```bash
+cd backend
+npm install
+```
+
+Frontend:
+
+```bash
+cd frontend
+npm install
+```
+
+### 3. Environment variables
+
+Create a `.env` file inside the **backend** folder:
+
+```env
+PORT=5001
+MONGO_URI=mongodb://localhost:27017/socialmedia_app
+JWT_SECRET=your_secret_key
+
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+
+FRONTEND_URL=http://localhost:3000
+```
+
+### 4. Run the application
+
+Start the backend (runs on `http://localhost:5001`):
+
+```bash
+cd backend
+npm run dev
+```
+
+Start the frontend (runs on `http://localhost:3000`):
+
+```bash
+cd frontend
+npm start
+```
+
+---
+
+## What This Project Demonstrates
+
+- Full-stack application development
 - REST API design
 - JWT authentication
 - MongoDB database modeling
@@ -264,6 +243,6 @@ This project demonstrates:
 
 ---
 
-# 👩‍💻 Author
+## Author
 
 **Albenisa Hamidi**
